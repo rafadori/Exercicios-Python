@@ -26,3 +26,6 @@ lower = (valor.islower())
 print('Está em minusculas? {} '.format(lower))
 title = (valor.istitle())
 print('Está capitalizada? {} '.format(title))
+
+#também da para fazer utlizando a virgula, para escrever menos
+#print('esta em minusculo?', valor.islower())

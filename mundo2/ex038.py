@@ -2,12 +2,21 @@
 
 import os, time
 
-os.system('clear') or None
+os.system('cls' if os.name == 'nt' else 'clear')
 
 print('Bem vindo ao empréstimo bancário\nVamos dar início a simulação')
 time.sleep(2)
-casa = float(input('Qual o valor da casa? R$ '))
+print('...')
+time.sleep(2)
+
+valor_casa = float(input('Qual o valor da casa? R$ '))
 salario = float(input('Qual o salário do comprador? R$ '))
-anos = int(input('Em quantos anos pretende pagar a casa?'))
+anos = int(input('Em quantos anos pretende pagar a casa? '))
 
 meses = anos * 12
+prestacao = valor_casa / meses
+
+if prestacao > salario * 0.3:
+    print('Empréstimo negado..')
+else:
+    print('Emprestimo aprovado!')
